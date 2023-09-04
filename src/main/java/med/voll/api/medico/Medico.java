@@ -20,6 +20,7 @@ public class Medico {
   private Long id;
   private String name;
   private String email;
+  private String telephone;
   private String document;
   @Enumerated(EnumType.STRING)
   private Specialty specialty;
@@ -32,5 +33,6 @@ public class Medico {
     this.document = dataMedico.document();
     this.specialty = dataMedico.specialty();
     this.dataDirection = new Direction(dataMedico.dataDirection());
+    this.telephone = dataMedico.telephone();
   }
 }
