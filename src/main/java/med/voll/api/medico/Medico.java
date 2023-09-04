@@ -33,4 +33,13 @@ public class Medico {
     this.dataDirection = new Direction(dataMedico.dataDirection());
     this.telephone = dataMedico.telephone();
   }
+
+  public void updateData(UpdateDataMedico updateDataMedico) {
+    if (updateDataMedico.name() == null && updateDataMedico.document() == null && updateDataMedico.dataDirection() == null){
+      throw new IllegalArgumentException("No there's data to update or data is null");
+    }
+    this.name = updateDataMedico.name();
+    this.document = updateDataMedico.document();
+    this.dataDirection = dataDirection.update(updateDataMedico.dataDirection());
+  }
 }

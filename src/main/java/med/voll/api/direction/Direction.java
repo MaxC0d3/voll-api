@@ -23,5 +23,14 @@ public class Direction {
     this.city = dataDirection.city();
     this.state = dataDirection.state();
   }
+
+  public Direction update(DataDirection dataDirection) {
+    this.street = dataDirection.street();
+    this.number = dataDirection.number();
+    this.complement = dataDirection.complement();
+    this.city = dataDirection.city();
+    this.state = dataDirection.state();
+    return this;
+  }
 }
 
