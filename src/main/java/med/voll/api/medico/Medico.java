@@ -35,11 +35,11 @@ public class Medico {
   }
 
   public void updateData(UpdateDataMedico updateDataMedico) {
-    if (updateDataMedico.name() == null && updateDataMedico.document() == null && updateDataMedico.dataDirection() == null){
+    if (updateDataMedico.email() == null && updateDataMedico.telephone() == null && updateDataMedico.dataDirection() == null){
       throw new IllegalArgumentException("No there's data to update or data is null");
     }
-    this.name = updateDataMedico.name();
-    this.document = updateDataMedico.document();
+    this.telephone = updateDataMedico.telephone();
+    this.email = updateDataMedico.email();
     this.dataDirection = dataDirection.update(updateDataMedico.dataDirection());
   }
 }

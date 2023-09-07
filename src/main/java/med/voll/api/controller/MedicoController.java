@@ -32,7 +32,7 @@ public class MedicoController {
     return ResponseEntity.created(uri).body(medico);
   }
   @GetMapping
-  public ResponseEntity<Page<DataListMedico>> getMedico(@PageableDefault(size = 2) Pageable pageable){
+  public ResponseEntity<Page<DataListMedico>> getMedico(Pageable pageable){
     return ResponseEntity.ok(medicoRepository.findAll(pageable).map(DataListMedico::new));
   }
 
